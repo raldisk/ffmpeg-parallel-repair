@@ -1,0 +1,44 @@
+verify_fixed.py — Report
+============================================================
+
+Total: 3  PASS: 1  WARN: 1  FAIL: 1
+
+[PASS]  clean_recording_fixed.mp4
+  duration : 45:12 (source: 45:14)
+  ratio    : 99.9%
+  codec    : h264 1920×1080
+  decode   : 22.1s  errors: 0  warnings: 0
+
+[WARN]  webcam_session_fixed.mp4
+  duration : 1:12:31 (source: 1:12:33)
+  ratio    : 99.5%
+  codec    : h264 1920×1080
+  decode   : 41.3s  errors: 14  warnings: 3
+  → Decode succeeded but 14 error line(s) in stderr
+  → 3 warning line(s) during decode
+  ffmpeg errors:
+    [h264 @ 0x000001fa3c2d0040] non monotonous DTS in output stream 0:0; previous: 2754000, current: 2751900; changing to 2753999
+    [mov,mp4,m4a @ 0x000001fa3c1b0040] DTS 91800, next: 91440, st: 1 invalid dropping
+    [aac @ 0x000001fa3c310040] Discarding non-monotonous DTS
+    [h264 @ 0x000001fa3c2d0040] non monotonous DTS in output stream 0:0; previous: 3102000, current: 3099900; changing to 3101999
+    [mov,mp4,m4a @ 0x000001fa3c1b0040] DTS 101640, next: 101280, st: 1 invalid dropping
+    [h264 @ 0x000001fa3c2d0040] non monotonous DTS in output stream 0:0; previous: 3450000, current: 3448200; changing to 3449999
+    [mov,mp4,m4a @ 0x000001fa3c1b0040] DTS 115200, next: 114840, st: 1 invalid dropping
+    [aac @ 0x000001fa3c310040] Discarding non-monotonous DTS
+    [h264 @ 0x000001fa3c2d0040] non monotonous DTS in output stream 0:0; previous: 3798000, current: 3795900; changing to 3797999
+    [mov,mp4,m4a @ 0x000001fa3c1b0040] DTS 128880, next: 128520, st: 1 invalid dropping
+    [aac @ 0x000001fa3c310040] Discarding non-monotonous DTS
+    [h264 @ 0x000001fa3c2d0040] non monotonous DTS in output stream 0:0; previous: 4146000, current: 4143900; changing to 4145999
+    [mov,mp4,m4a @ 0x000001fa3c1b0040] DTS 142560, next: 142200, st: 1 invalid dropping
+    [aac @ 0x000001fa3c310040] Discarding non-monotonous DTS
+  ffmpeg warnings:
+    [aac @ 0x000001fa3c310040] Sample rate index in frame (3) contradicts container (3)
+    [mov,mp4,m4a @ 0x000001fa3c1b0040] non monotonous DTS in output stream
+    [h264 @ 0x000001fa3c2d0040] Warning: AVFrame.format is not set
+
+[FAIL]  corrupted_lecture_fixed.mp4
+  duration : — (source: 1:28:04)
+  ratio    : 0.0%
+  codec    : —
+  decode   : 0.0s  errors: 0  warnings: 0
+  → ffprobe failed — container unreadable
